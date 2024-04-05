@@ -14,7 +14,7 @@ pipeline{
         stage('SonarQube Analysis Stage') {
             steps{
                 withSonarQubeEnv('sonar_node') { 
-                    sh "opt/apache-maven-3.9.6/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=sonarqube_1"
+                    sh "/opt/apache-maven-3.9.6/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=sonarqube_1"
                 }
             }
         }
