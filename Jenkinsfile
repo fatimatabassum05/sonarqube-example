@@ -8,7 +8,7 @@ pipeline{
          }        
        stage('Build Stage'){
             steps{
-                sh 'mvn clean install'
+                sh '/opt/apache-maven-3.9.6/bin/mvn clean install'
             }
          }
         stage('SonarQube Analysis Stage') {
